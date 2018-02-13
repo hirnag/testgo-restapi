@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    image: golang:latest
+    working_dir: '/go/src'
+    command: sh start_cmd.sh
+    volumes:
+      - .:/go/src
+    ports:
+      - 8080:5000
+    tty: true
+
